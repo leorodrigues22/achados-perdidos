@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrar | AchaIFSC</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap top"><a class="logo" href="index.html">🔎 <strong>AchaIFSC</strong></a><nav><a href="index.html">Início</a></nav></div></header>
+<main class="loginPage">
+  <div class="loginBox">
+    <p class="tag">Conta</p>
+    <h1>Entrar</h1>
+    <form id="loginForm">
+      <label>E-mail<input id="email" type="email" required></label>
+      <label>Senha<input id="senha" type="password" minlength="6" required></label>
+      <button class="btn full">Entrar</button>
+    </form>
+    <div class="sep">ou</div>
+    <form id="registerForm">
+      <label>E-mail<input id="regEmail" type="email" required placeholder="seuemail@aluno.ifsc.edu.br"></label>
+      <label>Crie uma senha<input id="regSenha" type="password" minlength="6" required></label>
+      <button class="btn secondary full">Criar conta</button>
+    </form>
+    <p id="msg" class="msg"></p>
+  </div>
+</main>
+<script type="module" src="js/login.js"></script>
+</body>
+</html>
