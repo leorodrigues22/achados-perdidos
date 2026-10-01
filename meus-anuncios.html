@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus anúncios | AchaIFSC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topo">
+      <a href="index.html" class="logo">
+        <span>🔎</span>
+        <div>
+          <strong>AchaIFSC</strong>
+          <small>Achados e perdidos do IFSC</small>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="meus-anuncios.html">Meus anúncios</a>
+        <a href="publicar.html" class="botao pequeno">Publicar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mural">
+    <div class="conteudo">
+      <div class="titulo-secao">
+        <div>
+          <p class="etiqueta">Área pessoal</p>
+          <h1>Meus anúncios</h1>
+          <p class="subtexto menor">
+            Aqui aparecem somente os anúncios criados neste navegador.
+          </p>
+        </div>
+      </div>
+
+      <div id="meusAnuncios" class="grade"></div>
+
+      <div id="semAnuncios" class="vazio escondido">
+        <p>Você ainda não publicou nada neste navegador.</p>
+        <a href="publicar.html" class="botao">Criar publicação</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/meus-anuncios.js"></script>
+</body>
+</html>

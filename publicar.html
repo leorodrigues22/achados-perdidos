@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar | AchaIFSC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topo">
+      <a href="index.html" class="logo">
+        <span>🔎</span>
+        <div>
+          <strong>AchaIFSC</strong>
+          <small>Achados e perdidos do IFSC</small>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="meus-anuncios.html">Meus anúncios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-formulario">
+    <div class="conteudo formulario-layout">
+      <aside>
+        <p class="etiqueta">Nova publicação</p>
+        <h1>Conte o que aconteceu</h1>
+        <p>
+          Preencha só o necessário. Quanto mais clara for a descrição,
+          mais fácil fica para alguém reconhecer o objeto.
+        </p>
+
+        <div class="caixa-info">
+          <strong>Quem pode editar?</strong>
+          <p>
+            Apenas este navegador, que criou a publicação, poderá alterar
+            ou marcar o anúncio como resolvido nesta versão do projeto.
+          </p>
+        </div>
+      </aside>
+
+      <form id="formPublicar" class="formulario">
+        <div class="campo">
+          <label>Tipo da publicação</label>
+          <div class="opcoes-tipo">
+            <label>
+              <input type="radio" name="tipo" value="perdido" checked>
+              <span>🔴 Perdi</span>
+            </label>
+            <label>
+              <input type="radio" name="tipo" value="encontrado">
+              <span>🟢 Encontrei</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="duas-colunas">
+          <div class="campo">
+            <label for="titulo">Objeto *</label>
+            <input id="titulo" name="titulo" required placeholder="Ex.: Garrafa preta">
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoria *</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione</option>
+              <option>Eletrônicos</option>
+              <option>Material escolar</option>
+              <option>Roupas</option>
+              <option>Documentos</option>
+              <option>Chaves</option>
+              <option>Garrafas e copos</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="local">Local *</label>
+            <input id="local" name="local" required placeholder="Ex.: Biblioteca">
+          </div>
+
+          <div class="campo">
+            <label for="data">Data *</label>
+            <input id="data" name="data" type="date" required>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="descricao">Descrição *</label>
+          <textarea id="descricao" name="descricao" maxlength="500" required
+            placeholder="Cor, marca, detalhes e onde foi visto pela última vez..."></textarea>
+          <small><span id="contador">0</span>/500</small>
+        </div>
+
+        <div class="campo">
+          <label for="contato">Contato *</label>
+          <input id="contato" name="contato" required
+            placeholder="Ex.: e-mail institucional ou Instagram">
+        </div>
+
+        <div class="campo">
+          <label for="foto">Foto</label>
+          <input id="foto" name="foto" type="file" accept="image/*">
+          <div id="preview" class="preview escondido"></div>
+        </div>
+
+        <div class="acoes-form">
+          <a href="index.html" class="botao claro">Cancelar</a>
+          <button class="botao" type="submit">Publicar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/publicar.js"></script>
+</body>
+</html>
