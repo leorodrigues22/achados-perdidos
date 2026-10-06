@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AchaIFSC</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="logo" href="index.html">🔎 <strong>AchaIFSC</strong></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="meus-anuncios.html">Meus anúncios</a>
+      <a href="publicar.html">Publicar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap heroGrid">
+      <div>
+        <p class="tag">Comunidade IFSC</p>
+        <h1>Perdeu ou encontrou alguma coisa?</h1>
+        <p class="lead">Publique no mural e ajude o objeto a voltar para o dono.</p>
+        <div class="actions">
+          <a class="btn red" href="publicar.html?tipo=perdido">Perdi algo</a>
+          <a class="btn" href="publicar.html?tipo=encontrado">Encontrei algo</a>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Como funciona</strong>
+        <p>Você publica e o anúncio fica salvo online no Supabase.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="sectionHead">
+      <div>
+        <p class="tag">Mural</p>
+        <h2>Publicações</h2>
+      </div>
+      <div class="section-actions">
+        <button id="analisarIA" class="btn secondary" type="button">🤖 Ver possíveis correspondências</button>
+        <a class="btn" href="publicar.html">+ Publicar</a>
+      </div>
+    </div>
+
+    <div id="iaHomeBox" class="ai-match-box hidden"></div>
+
+    <div class="toolbar">
+      <input id="busca" placeholder="Pesquisar objeto, local ou descrição...">
+      <div class="filters">
+        <button class="filter active" data-filter="todos">Todos</button>
+        <button class="filter" data-filter="perdido">Perdidos</button>
+        <button class="filter" data-filter="encontrado">Encontrados</button>
+        <button class="filter" data-filter="resolvido">Resolvidos</button>
+      </div>
+    </div>
+
+    <div id="lista" class="grid"></div>
+    <div id="vazio" class="empty hidden">Nenhum anúncio encontrado.</div>
+  </section>
+</main>
+
+<footer><div class="wrap">AchaIFSC • Projeto acadêmico</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ai-match.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
