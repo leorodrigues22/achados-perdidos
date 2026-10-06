@@ -5,7 +5,7 @@
 // ============================================================
 
 const SUPABASE_URL = "https://smymcbltrxtcmiaiodqu.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "COLE_SUA_PUBLISHABLE_KEY_AQUI";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable__iPfUcoqauG7AhO0W55_bA_e5DijhSN";
 
 if (!window.supabase) {
   throw new Error("Biblioteca do Supabase não foi carregada.");
