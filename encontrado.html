@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Encontrei um objeto | AchaIFSC</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap top">
+    <a class="logo" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="brand-text"><strong>Acha</strong><b>IFSC</b><small>achados e perdidos</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Mural</a>
+      <a href="perdido.html">Perdi</a>
+      <a class="active" href="encontrado.html">Encontrei</a>
+      <a href="meus-anuncios.html">Meus anúncios</a>
+    </nav>
+  </div>
+</header>
+
+<main class="form-shell found-shell">
+  <section class="form-intro">
+    <div class="form-intro-inner">
+      <span class="form-kicker green-kicker">OBJETO ENCONTRADO</span>
+      <h1>Você pode ajudar esse objeto a voltar para casa.</h1>
+      <p>Cadastre onde encontrou e descreva os detalhes. O sistema poderá comparar com anúncios de objetos perdidos.</p>
+      <div class="tips-card">
+        <strong>Uma boa publicação inclui</strong>
+        <ul>
+          <li>Local exato onde o objeto foi encontrado.</li>
+          <li>Cor, marca e características principais.</li>
+          <li>Um contato para combinar a devolução.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-area">
+    <form id="postForm" class="panel professional-form">
+      <input type="hidden" name="tipo" value="encontrado">
+      <div class="form-heading">
+        <div class="form-status found-status-dot"></div>
+        <div><span>Nova publicação</span><h2>Objeto encontrado</h2></div>
+      </div>
+
+      <div class="two">
+        <label>Objeto *
+          <input name="titulo" required placeholder="Ex.: Chave com chaveiro azul">
+        </label>
+        <label>Categoria *
+          <select name="categoria" required>
+            <option value="">Selecione</option>
+            <option>Eletrônicos</option><option>Material escolar</option><option>Roupas</option><option>Documentos</option><option>Chaves</option><option>Garrafas e copos</option><option>Outros</option>
+          </select>
+        </label>
+        <label>Local encontrado *
+          <input name="local" required placeholder="Ex.: Corredor do Bloco E">
+        </label>
+        <label>Data *
+          <input id="data" name="data" type="date" required>
+        </label>
+      </div>
+
+      <label>Descrição *
+        <textarea name="descricao" maxlength="500" required placeholder="Cor, marca, tamanho e características visíveis..."></textarea>
+      </label>
+      <label>Contato *
+        <input name="contato" required placeholder="Instagram, e-mail ou outro contato">
+      </label>
+      <label class="file-label">Foto
+        <input id="foto" type="file" accept="image/*">
+        <small>Opcional. Evite mostrar detalhes que só o verdadeiro dono deveria saber.</small>
+      </label>
+      <div id="preview" class="preview hidden"></div>
+
+      <button class="btn green full submit-main" type="submit">Publicar objeto encontrado</button>
+      <p id="msg" class="msg"></p>
+      <div id="aiStatus" class="ai-status hidden"></div>
+      <div id="matchBox" class="ai-match-box hidden"></div>
+    </form>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ai-match.js"></script>
+<script src="js/publicar.js"></script>
+</body>
+</html>

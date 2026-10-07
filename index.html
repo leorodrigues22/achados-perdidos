@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AchaIFSC | Achados e Perdidos</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap top">
+    <a class="logo" href="index.html" aria-label="AchaIFSC - Início">
+
+  <span class="brand-search" aria-hidden="true">
+    <svg viewBox="0 0 64 64">
+      <circle
+        cx="27"
+        cy="27"
+        r="14"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="6"
+      ></circle>
+
+      <line
+        x1="38"
+        y1="38"
+        x2="52"
+        y2="52"
+        stroke="currentColor"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></line>
+
+      <circle
+        cx="43"
+        cy="17"
+        r="5"
+        fill="#d62828"
+      ></circle>
+    </svg>
+  </span>
+
+  <span class="brand-text">
+    <span class="brand-name">
+      <strong>Acha</strong><b>IFSC</b>
+    </span>
+
+    <small>achados e perdidos</small>
+  </span>
+
+</a>
+    <nav class="main-nav">
+      <a class="active" href="index.html">Mural</a>
+      <a href="perdido.html">Perdi</a>
+      <a href="encontrado.html">Encontrei</a>
+      <a href="meus-anuncios.html">Meus anúncios</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero-home">
+    <div class="wrap heroGrid">
+      <div class="hero-copy">
+        <p class="tag">Comunidade IFSC</p>
+        <h1>Um jeito simples de <span>reencontrar o que importa.</span></h1>
+        <p class="lead">Centralize objetos perdidos e encontrados em um só lugar. Publique em poucos passos e deixe a comparação inteligente ajudar a conectar anúncios parecidos.</p>
+        <div class="actions actions-large">
+          <a class="btn red" href="perdido.html"><span>Perdi um objeto</span><small>Quero procurar no mural</small></a>
+          <a class="btn green" href="encontrado.html"><span>Encontrei um objeto</span><small>Quero ajudar a devolver</small></a>
+        </div>
+      </div>
+
+      <aside class="hero-visual" aria-label="Como funciona">
+        <div class="visual-badge">AchaIFSC</div>
+        <div class="visual-card lost-mini">
+          <span class="dot red-dot"></span>
+          <div><small>PERDIDO</small><strong>Fone preto JBL</strong><span>Bloco F</span></div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="match-pill">92% compatível</div>
+        <div class="visual-card found-mini">
+          <span class="dot green-dot"></span>
+          <div><small>ENCONTRADO</small><strong>Fone de ouvido preto</strong><span>Próximo ao Bloco F</span></div>
+        </div>
+        <p class="visual-note">A IA compara descrição, categoria, local e data.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="quick-choice">
+    <div class="wrap quick-grid">
+      <article class="choice-card lost-choice">
+        <div class="choice-icon">!</div>
+        <div>
+          <p class="tag tag-red">Perdeu alguma coisa?</p>
+          <h2>Cadastre como perdido</h2>
+          <p>Informe onde viu o objeto pela última vez e adicione os detalhes que podem ajudar na identificação.</p>
+          <a class="text-link red-link" href="perdido.html">Publicar objeto perdido →</a>
+        </div>
+      </article>
+
+      <article class="choice-card found-choice">
+        <div class="choice-icon">✓</div>
+        <div>
+          <p class="tag">Encontrou alguma coisa?</p>
+          <h2>Cadastre como encontrado</h2>
+          <p>Registre o local e as características do objeto para facilitar o encontro com o dono.</p>
+          <a class="text-link" href="encontrado.html">Publicar objeto encontrado →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="mural">
+    <div class="sectionHead">
+      <div>
+        <p class="tag">Mural da comunidade</p>
+        <h2>Publicações recentes</h2>
+        <p class="section-subtitle">Pesquise por objeto, local ou descrição.</p>
+      </div>
+      <div class="section-actions">
+        <button id="analisarIA" class="btn secondary" type="button">✦ Buscar correspondências</button>
+      </div>
+    </div>
+
+    <div id="iaHomeBox" class="ai-match-box hidden"></div>
+
+    <div class="toolbar modern-toolbar">
+      <div class="search-field">
+        <span>⌕</span>
+        <input id="busca" placeholder="Ex.: garrafa, bloco F, biblioteca...">
+      </div>
+      <div class="filters" aria-label="Filtros do mural">
+        <button class="filter active" data-filter="todos">Todos</button>
+        <button class="filter" data-filter="perdido">Perdidos</button>
+        <button class="filter" data-filter="encontrado">Encontrados</button>
+        <button class="filter" data-filter="resolvido">Resolvidos</button>
+      </div>
+    </div>
+
+    <div id="lista" class="grid"></div>
+    <div id="vazio" class="empty hidden">Nenhum anúncio encontrado.</div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <strong>AchaIFSC</strong>
+      <p>Projeto acadêmico para aproximar pessoas e objetos dentro da comunidade.</p>
+    </div>
+    <span>IFSC • Achados e perdidos</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ai-match.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

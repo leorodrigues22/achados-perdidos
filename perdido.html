@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perdi um objeto | AchaIFSC</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap top">
+    <a class="logo" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="brand-text"><strong>Acha</strong><b>IFSC</b><small>achados e perdidos</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Mural</a>
+      <a class="active lost-active" href="perdido.html">Perdi</a>
+      <a href="encontrado.html">Encontrei</a>
+      <a href="meus-anuncios.html">Meus anúncios</a>
+    </nav>
+  </div>
+</header>
+
+<main class="form-shell lost-shell">
+  <section class="form-intro">
+    <div class="form-intro-inner">
+      <span class="form-kicker red-kicker">OBJETO PERDIDO</span>
+      <h1>Vamos ajudar você a encontrar.</h1>
+      <p>Quanto mais detalhes você informar, mais fácil será comparar seu anúncio com objetos encontrados.</p>
+      <div class="tips-card">
+        <strong>Antes de publicar</strong>
+        <ul>
+          <li>Informe cor, marca e características visíveis.</li>
+          <li>Use o local mais específico possível.</li>
+          <li>Adicione uma foto, se tiver.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-area">
+    <form id="postForm" class="panel professional-form">
+      <input type="hidden" name="tipo" value="perdido">
+      <div class="form-heading">
+        <div class="form-status lost-status-dot"></div>
+        <div><span>Nova publicação</span><h2>Objeto perdido</h2></div>
+      </div>
+
+      <div class="two">
+        <label>Objeto *
+          <input name="titulo" required placeholder="Ex.: Garrafa térmica preta">
+        </label>
+        <label>Categoria *
+          <select name="categoria" required>
+            <option value="">Selecione</option>
+            <option>Eletrônicos</option><option>Material escolar</option><option>Roupas</option><option>Documentos</option><option>Chaves</option><option>Garrafas e copos</option><option>Outros</option>
+          </select>
+        </label>
+        <label>Último local visto *
+          <input name="local" required placeholder="Ex.: Biblioteca, Bloco F">
+        </label>
+        <label>Data *
+          <input id="data" name="data" type="date" required>
+        </label>
+      </div>
+
+      <label>Descrição *
+        <textarea name="descricao" maxlength="500" required placeholder="Cor, marca, tamanho, detalhes, adesivos, capa..."></textarea>
+      </label>
+      <label>Contato *
+        <input name="contato" required placeholder="Instagram, e-mail ou outro contato">
+      </label>
+      <label class="file-label">Foto
+        <input id="foto" type="file" accept="image/*">
+        <small>Opcional. Uma imagem ajuda muito na identificação.</small>
+      </label>
+      <div id="preview" class="preview hidden"></div>
+
+      <button class="btn red full submit-main" type="submit">Publicar objeto perdido</button>
+      <p id="msg" class="msg"></p>
+      <div id="aiStatus" class="ai-status hidden"></div>
+      <div id="matchBox" class="ai-match-box hidden"></div>
+    </form>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ai-match.js"></script>
+<script src="js/publicar.js"></script>
+</body>
+</html>
