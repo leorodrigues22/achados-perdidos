@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meus anúncios | AchaIFSC</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="logo" href="index.html">🔎 <strong>AchaIFSC</strong></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="publicar.html">Publicar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap section">
+  <p class="tag">Seus anúncios</p>
+  <h1>Meus anúncios</h1>
+  <p class="lead">Aqui você pode gerenciar o que publicou neste navegador. Os anúncios ficam salvos online.</p>
+
+  <div id="meus" class="grid"></div>
+  <div id="vazio" class="empty hidden">Você ainda não publicou nada.</div>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/common.js"></script>
+<script src="js/meus-anuncios.js"></script>
+</body>
+</html>
