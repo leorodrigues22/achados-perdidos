@@ -1,0 +1,16 @@
+AchaIFSC - versão responsiva para PC e celular
+
+O que foi ajustado:
+- cabeçalho e navegação padronizados em todas as páginas;
+- logo padronizada em todo o site;
+- layout da página inicial reequilibrado para desktop;
+- cards com 3 colunas em desktop, 2 em tablet e 1 no celular;
+- formulários reorganizados para desktop e celular;
+- menu horizontal adaptado para telas menores;
+- campos e botões maiores no celular;
+- tela Meus anúncios padronizada;
+- resultados da IA e contatos responsivos;
+- e-mail continua sendo o único contato clicável;
+- configuração do Firebase e dados existentes foram mantidos.
+
+Arquivos de banco/IA não foram trocados. O objetivo desta versão é melhorar o front-end e a responsividade.

@@ -1,0 +1,9 @@
+AchaIFSC - Busca sem tokens
+
+1. Envie todos os arquivos ao GitHub, mantendo a estrutura das pastas.
+2. Aguarde a Vercel publicar.
+3. Na página inicial, a busca é feita no Firebase sem chamar o Gemini.
+4. Os resultados mostram foto (quando cadastrada) e link para o anúncio no mural.
+5. O botão Pedir ajuda ao Gemini é opcional e consome cota somente quando clicado.
+6. A busca é uma correspondência por palavras e sinônimos, não interpretação generativa.
+7. Para uso público em grande escala, ainda é importante proteger o endpoint /api/chat contra abuso com limites no servidor, além de revisar as regras de acesso do Firebase.

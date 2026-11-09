@@ -1,0 +1,5 @@
+AchaIFSC 2.0 - Verde IFSC
+Menu: Assistente, Mural, Perdi, Encontrei.
+O mural em mural.html mostra publicacoes do Firebase quando configurado.
+O chat ainda faz busca guiada, nao conversa com IA generativa.
+Configure o Firebase conforme o README do projeto.

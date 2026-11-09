@@ -1,0 +1,5 @@
+AchaIFSC - versão com a capa anterior restaurada.
+Busca gratuita por objeto: resultados exigem que o nome ou a descrição contenham o tipo de objeto buscado.
+A pesquisa não usa tokens da IA.
+Publique o conteúdo da pasta achados-perdidos-main na raiz do repositório GitHub.
+A API do Gemini permanece no projeto, mas não é chamada pela busca principal.

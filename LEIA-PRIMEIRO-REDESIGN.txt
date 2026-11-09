@@ -1,0 +1,5 @@
+ACHAIFSC - VISUAL RESPONSIVO
+
+A página inicial foi redesenhada para celular e computador. A busca no mural continua gratuita, sem botão de IA opcional. O arquivo api/chat.js foi mantido no projeto para uma eventual integração futura, mas não é chamado pela página inicial.
+
+Envie os arquivos e pastas ao repositório GitHub, preservando a estrutura, e aguarde a publicação da Vercel.
