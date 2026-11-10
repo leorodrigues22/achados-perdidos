@@ -33,3 +33,58 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .result-card img{max-width:30%;height:76px;object-fit:cover}
 @media(max-width:800px){.topbar{padding:12px 18px;flex-wrap:wrap;min-height:0}.topbar nav{width:100%;gap:20px;overflow-x:auto;scrollbar-width:thin}.topbar nav a{padding:9px 0 12px}.chat-layout{display:block}.sidebar{border-right:0;border-bottom:1px solid #dce5dc}.workspace-title{gap:12px;flex-wrap:wrap}.messages{max-height:55vh;min-height:260px}.composer{display:flex}.composer input{min-width:0;flex:1}.composer button{flex-shrink:0}}
 @media(max-width:480px){main{padding:24px 14px 15px}.heading{margin-bottom:22px}.heading h1{font-size:clamp(30px,9vw,40px);letter-spacing:-1px}.heading>p{font-size:14px}.workspace-title{padding:15px}.workspace-title h2{font-size:17px}.online{font-size:11px}.sidebar{padding:15px}.sidebar button{font-size:12px}.messages{padding:14px;max-height:52vh}.bubble{max-width:96%;overflow-wrap:anywhere}.composer{margin:0 12px}.composer input{padding:12px 9px}.composer button{padding:0 12px}.hint{margin:10px 12px 16px}.result-card{gap:10px;padding:10px}.result-card img{width:65px;height:65px}}
+
+/* AchaIFSC: experiência mobile, preservando a capa no desktop */
+@media (max-width: 800px) {
+  .topbar { padding: 12px 16px 0; gap: 8px; }
+  .logo { font-size: 21px; }
+  .topbar nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; overflow: visible; }
+  .topbar nav a { min-width: 0; padding: 12px 4px; text-align: center; font-size: 13px; }
+  main { width: 100%; max-width: 650px; padding: 24px 12px 16px; }
+  .heading { margin-bottom: 18px; }
+  .heading h1 { margin: 12px 0; font-size: clamp(29px, 6.5vw, 39px); line-height: 1.15; letter-spacing: -.9px; }
+  .heading>p { margin: 0; line-height: 1.5; }
+  .workspace-title { padding: 16px; align-items: flex-start; }
+  .workspace-title h2 { font-size: 18px; }
+  .online { font-size: 11px; }
+  .sidebar { padding: 12px 14px; }
+  .sidebar-label { margin: 0 0 10px; }
+  .sidebar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .sidebar-label { flex-basis: 100%; }
+  .sidebar button { display: flex; width: auto; flex: 1 1 auto; min-height: 43px; justify-content: center; gap: 5px; margin: 0; padding: 9px 10px; border: 1px solid #dce1dd; border-radius: 5px; white-space: nowrap; }
+  .sidebar button span { flex: 0 1 auto; }
+  .messages { min-height: 250px; max-height: min(48dvh, 440px); padding: 16px; gap: 12px; overscroll-behavior: contain; }
+  .bubble { max-width: 91%; padding: 12px 13px; font-size: 14px; line-height: 1.55; overflow-wrap: anywhere; }
+  .composer { margin: 0 12px; padding-top: 12px; gap: 8px; }
+  .composer input { width: 0; flex: 1 1 0; min-width: 0; min-height: 48px; padding: 11px 12px; font-size: 16px; border-radius: 4px; }
+  .composer button { min-width: 75px; min-height: 48px; padding: 0 12px; border-radius: 4px; font-size: 13px; }
+  .composer button span { display: none; }
+  .hint { margin: 10px 12px 16px; line-height: 1.5; }
+  .result-card { align-items: flex-start; }
+  .result-card img { width: 68px; max-width: 28%; height: 68px; }
+  footer { padding: 18px 2px; font-size: 11px; }
+}
+@media (max-width: 440px) {
+  main { padding: 20px 10px 12px; }
+  .heading h1 { font-size: clamp(28px, 8vw, 34px); }
+  .heading>p { font-size: 13px; }
+  .overline { font-size: 10px; }
+  .workspace-title { padding: 13px; }
+  .workspace-title h2 { font-size: 17px; }
+  .online { display: block; width: 100%; }
+  .sidebar { padding: 10px; gap: 6px; }
+  .sidebar button { flex: 1 1 calc(50% - 6px); font-size: 11px; padding: 8px 5px; }
+  .sidebar button span { font-size: 12px; }
+  .sidebar button:last-of-type { flex-basis: 100%; }
+  .messages { padding: 12px; min-height: 220px; max-height: 46dvh; }
+  .bubble { max-width: 94%; }
+  .result-card { padding: 9px; gap: 8px; }
+  .result-card strong { font-size: 13px; }
+  .result-card small { font-size: 11px; }
+}
+@media (max-width: 350px) {
+  .topbar nav a { font-size: 12px; }
+  .sidebar button { flex-basis: 100%; }
+  .composer { margin: 0 8px; gap: 6px; }
+  .composer button { min-width: 65px; padding: 0 8px; }
+}
