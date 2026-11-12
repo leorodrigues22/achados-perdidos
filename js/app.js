@@ -94,7 +94,7 @@ async function carregarPosts() {
 
   try {
     const data = await window.AchaIFSC_DB.listItems();
-    posts = (data || []).map(dbToPost).filter(post => post.tipo === "encontrado");
+    posts = (data || []).map(dbToPost);
     render();
   } catch (error) {
     console.error(error);
