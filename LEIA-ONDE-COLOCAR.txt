@@ -1,0 +1,24 @@
+Substitua no GitHub exatamente estes arquivos pelos de mesmo nome:
+
+RAIZ do projeto:
+- index.html
+- mural.html
+- encontrado.html
+- publicar.html
+- meus-anuncios.html
+
+PASTA js:
+- app.js
+- chat.js
+- publicar.js
+
+EXCLUA da raiz:
+- perdido.html
+
+NAO ALTERE:
+- css/style.css
+- css/chat.css
+- js/firebase.js
+- api/chat.js
+
+Atenção: anúncios antigos de perdidos não são excluídos do Firebase.
