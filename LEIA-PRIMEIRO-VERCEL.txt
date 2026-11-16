@@ -1,0 +1,18 @@
+ACHAIFSC - VERSAO INTEGRADA PARA VERCEL
+
+Esta versão contém todas as páginas: index.html, mural.html, perdido.html, encontrado.html, meus-anuncios.html e publicar.html.
+
+NÃO remova a pasta js. Há 7 scripts indispensáveis, incluindo firebase.js, common.js, app.js e publicar.js.
+
+PASSO A PASSO
+1. Extraia este ZIP. Envie o CONTEÚDO da pasta achados-perdidos-main para a RAIZ do repositório no GitHub (não envie a pasta por cima da raiz).
+2. Veja no GitHub se index.html, mural.html, perdido.html e encontrado.html estão na mesma pasta que vercel.json.
+3. Veja se js/firebase.js, js/common.js, js/app.js, js/chat.js, js/publicar.js, js/ai-match.js e js/meus-anuncios.js estão todos presentes.
+4. Vercel: escolha o projeto conectado a esse mesmo repositório e branch main. Settings > Build and Deployment: Root Directory = raiz; Framework = Other; Output Directory = vazio. Abra o DOMÍNIO DE PRODUÇÃO da implantação nova.
+5. Firebase > Authentication > Sign-in method: ative Anonymous. Realtime Database: confirme que os anúncios estão em /itens e que as regras permitem leitura de /itens e criação autenticada anônima.
+6. O arquivo firebase-realtime-database-rules.json é UMA REFERÊNCIA: o GitHub NÃO envia regras para o Firebase automaticamente. Revise e aplique manualmente no Firebase Console se necessário. Não apague o banco.
+7. Vercel > Settings > Environment Variables: configure GEMINI_API_KEY para respostas conversacionais. Sem a chave, o chat ainda busca os anúncios diretamente no Firebase.
+8. Teste: publique "Lápis azul" em Encontrei; confira no mural; busque "perdi meu lápis" no chat; faça um anúncio Perdi e confirme que aparece no mural.
+
+Se os anúncios antigos não aparecerem, confirme no Firebase Console o projeto achaifsc e o caminho itens/. A leitura de anúncios anteriores depende dos registros existentes e das regras efetivas.
+AVISO: não foi possível executar login/gravação no seu Firebase diretamente daqui. Testes de sintaxe e de integridade de arquivos foram feitos.
